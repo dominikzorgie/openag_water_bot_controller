@@ -14,7 +14,7 @@ A major component to the Food Server design is the Water Bot, a device for preci
 - Device will have optional headers and zero-ohm resistor pads for connecting a Particle Photon in order to make the PCB a standalone IoT device. 
 - Best practices will be followed to minimize electromagnetic interference throughout the device. 
 - As the device will operate inside an environment that is subjected to high humidities and water splashing, all signal and power connectors will have an IP67 rating and the assembled PCB (PCBA) will be conformally coated.
-- Device will integrate with mechanical mount on the side of each grow rack
+- Device will integrate with mechanical mount on the side of each grow rack. The PCB will be no larger than 8"x8"
 
 ## Block Diagram
 ![Block Diagram](block_diagram.png)
