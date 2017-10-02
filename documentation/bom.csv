@@ -1,0 +1,5 @@
+Qty,Description,Unit Cost,Sum Cost,MFG,MFG P/N,Vendor,Vendor P/N,Link
+1,IC MCU 32BIT 8KB FLASH 16SOIC,1.18,1.18,Cypress Semiconductor Corp,CY8C4013SXI-411,Digikey,CY8C4013SXI-411-ND,https://www.digikey.com/product-detail/en/cypress-semiconductor-corp/CY8C4013SXI-411/CY8C4013SXI-411-ND/4842997
+1,IC REG LINEAR 5V 100MA SOT23-3,0.92,0.92,Texas Instruments,LM3480IM3-5.0/NOPB,Digikey,LM3480IM3-5.0/NOPBCT-ND,https://www.digikey.com/product-detail/en/texas-instruments/LM3480IM3-5.0-NOPB/LM3480IM3-5.0-NOPBCT-ND/270751?WT.srch=1&gclid=Cj0KCQjwgIPOBRDnARIsAHA1X3QuLGQe3q2Y9KcDRjClPOcUGqtjmfiUhgova6QJF5bhBFE-W-3abPsaAse3EALw_wcB
+?,DIODE GEN PURP 75V 200MA SOT23-3,0.2,?,Diodes Incorporated,MMBD4148-7-F,Digikey,MMBD4148-FDICT-ND,https://www.digikey.com/product-detail/en/diodes-incorporated/MMBD4148-7-F/MMBD4148-FDICT-ND/815711
+?, RELAY GEN PURPOSE SPDT 10A 12V,1.33,?,Omron Electronics,G5LE-14 DC12,Digikey,Z1012-ND,https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/G5LE-14-DC12/Z1012-ND/280369
