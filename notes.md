@@ -2,7 +2,6 @@ on psoc4000 micro, for power config, using unregulated external supply
 see fig 9 in datasheet
 why are we using 1uF instead of 0.1uF?
 
-
 what logic level i2c should we use?
 psoc4000 provides a separate voltage domain for P3.0, P3.1, P3.2 via VDDIO
 P3.0 and P3.1 are also SDAT and SCLK respectively
@@ -17,5 +16,7 @@ Idiode max 100uA (table 6)
 Itot_gpio max 85 mA (table 6)
 spec regulator for >100mA
 
+current draw on relay coil?
+- @12VDC, 33.3mA
 
 
