@@ -11396,6 +11396,63 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
+<library name="openag_diodes">
+<packages>
+<package name="DO-214AC">
+<description>&lt;b&gt;SURFACE MOUNT GENERAL RECTIFIER&lt;/b&gt; JEDEC DO-214AC molded platic body&lt;p&gt;
+Method 2026&lt;br&gt;
+Source: http://www.kingtronics.com/SMD_M7/M7_SMD_4007.pdf</description>
+<wire x1="-2.15" y1="1.3" x2="2.15" y2="1.3" width="0.2032" layer="51"/>
+<wire x1="2.15" y1="1.3" x2="2.15" y2="-1.3" width="0.2032" layer="51"/>
+<wire x1="2.15" y1="-1.3" x2="-2.15" y2="-1.3" width="0.2032" layer="51"/>
+<wire x1="-2.15" y1="-1.3" x2="-2.15" y2="1.3" width="0.2032" layer="51"/>
+<wire x1="-1.035" y1="1.3" x2="1.025" y2="1.3" width="0.2032" layer="21"/>
+<wire x1="1.025" y1="-1.3" x2="-1.035" y2="-1.3" width="0.2032" layer="21"/>
+<smd name="C" x="-2.025" y="0" dx="1.8" dy="2.4" layer="1"/>
+<smd name="A" x="2.025" y="0" dx="1.8" dy="2.4" layer="1" rot="R180"/>
+<text x="-2.54" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-2.825" y1="-1.1" x2="-2.175" y2="1.1" layer="51"/>
+<rectangle x1="2.175" y1="-1.1" x2="2.825" y2="1.1" layer="51" rot="R180"/>
+<rectangle x1="-1.065" y1="-1.225" x2="-0.39" y2="1.225" layer="21"/>
+<rectangle x1="-1.75" y1="-1.225" x2="-1.075" y2="1.225" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SMAJ14A">
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="-3.81" width="0.254" layer="94"/>
+<text x="-5.08" y="-5.08" size="1.27" layer="95">&gt;NAME</text>
+<text x="-5.08" y="5.08" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SMAJ14A">
+<description>TVS DIODE 14VWM 23.2VC SMA - https://www.digikey.com/product-detail/en/littelfuse-inc/SMAJ14A/SMAJ14ALFCT-ND/762486</description>
+<gates>
+<gate name="G$1" symbol="SMAJ14A" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DO-214AC">
+<connects>
+<connect gate="G$1" pin="P$1" pad="A"/>
+<connect gate="G$1" pin="P$2" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11548,6 +11605,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="TP22" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="B2,54" package3d_urn="urn:adsk.eagle:package:27948/1"/>
 <part name="TP23" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="B2,54" package3d_urn="urn:adsk.eagle:package:27948/1"/>
 <part name="SUPPLY22" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND1" device=""/>
+<part name="U$4" library="openag_diodes" deviceset="SMAJ14A" device=""/>
+<part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="10uF"/>
+<part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="4.7uF"/>
+<part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="F6" library="fuse" library_urn="urn:adsk.eagle:library:233" deviceset="GSH15" device="" package3d_urn="urn:adsk.eagle:package:14065/1"/>
+<part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11665,6 +11728,11 @@ Cambridge, MA 02139</text>
 <wire x1="306.07" y1="77.47" x2="306.07" y2="110.49" width="0.1524" layer="90" style="shortdash"/>
 <circle x="299.72" y="104.14" radius="1.27" width="0.1524" layer="94"/>
 <circle x="142.24" y="26.67" radius="1.27" width="0.1524" layer="94"/>
+<wire x1="137.16" y1="2.54" x2="208.28" y2="2.54" width="0.1524" layer="90" style="longdash"/>
+<wire x1="208.28" y1="2.54" x2="208.28" y2="35.56" width="0.1524" layer="90" style="longdash"/>
+<wire x1="208.28" y1="35.56" x2="137.16" y2="35.56" width="0.1524" layer="90" style="longdash"/>
+<wire x1="137.16" y1="35.56" x2="137.16" y2="2.54" width="0.1524" layer="90" style="longdash"/>
+<text x="151.13" y="30.48" size="2.54" layer="90">12V Input Power Conditioning</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$2" x="194.31" y="-43.18"/>
@@ -11809,6 +11877,12 @@ Cambridge, MA 02139</text>
 <instance part="TP22" gate="G$1" x="326.39" y="102.87" rot="R180"/>
 <instance part="TP23" gate="G$1" x="361.95" y="102.87" rot="R180"/>
 <instance part="SUPPLY22" gate="G$1" x="142.24" y="7.62"/>
+<instance part="U$4" gate="G$1" x="147.32" y="17.78" rot="R90"/>
+<instance part="C11" gate="G$1" x="158.75" y="17.78"/>
+<instance part="C12" gate="G$1" x="171.45" y="17.78"/>
+<instance part="C13" gate="G$1" x="184.15" y="17.78"/>
+<instance part="F6" gate="1" x="194.31" y="22.86"/>
+<instance part="P+8" gate="1" x="204.47" y="29.21"/>
 </instances>
 <busses>
 </busses>
@@ -11876,6 +11950,12 @@ Cambridge, MA 02139</text>
 <wire x1="-29.21" y1="87.63" x2="-44.45" y2="87.63" width="0.1524" layer="91"/>
 <wire x1="-44.45" y1="87.63" x2="-44.45" y2="100.33" width="0.1524" layer="91"/>
 <junction x="-44.45" y="100.33"/>
+</segment>
+<segment>
+<pinref part="F6" gate="1" pin="2"/>
+<wire x1="199.39" y1="22.86" x2="204.47" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="P+8" gate="1" pin="+12V"/>
+<wire x1="204.47" y1="22.86" x2="204.47" y2="26.67" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -12681,6 +12761,23 @@ Cambridge, MA 02139</text>
 <pinref part="SUPPLY20" gate="G$1" pin="GND1"/>
 <wire x1="369.57" y1="52.07" x2="368.3" y2="52.07" width="0.1524" layer="91" style="longdash"/>
 </segment>
+<segment>
+<pinref part="SUPPLY22" gate="G$1" pin="GND1"/>
+<pinref part="U$4" gate="G$1" pin="P$1"/>
+<wire x1="142.24" y1="10.16" x2="147.32" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="158.75" y1="10.16" x2="158.75" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="158.75" y1="10.16" x2="171.45" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="171.45" y1="10.16" x2="171.45" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="C13" gate="G$1" pin="2"/>
+<wire x1="171.45" y1="10.16" x2="184.15" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="184.15" y1="10.16" x2="184.15" y2="12.7" width="0.1524" layer="91"/>
+<junction x="171.45" y="10.16"/>
+<wire x1="147.32" y1="10.16" x2="158.75" y2="10.16" width="0.1524" layer="91"/>
+<junction x="147.32" y="10.16"/>
+<junction x="158.75" y="10.16"/>
+</segment>
 </net>
 <net name="GND2" class="0">
 <segment>
@@ -12788,9 +12885,25 @@ Cambridge, MA 02139</text>
 <label x="295.91" y="105.41" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="142.24" y1="26.67" x2="142.24" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="22.86" x2="147.32" y2="22.86" width="0.1524" layer="91"/>
-<label x="137.16" y="27.94" size="1.778" layer="95"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<wire x1="158.75" y1="22.86" x2="158.75" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="158.75" y1="22.86" x2="171.45" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="171.45" y1="22.86" x2="171.45" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="171.45" y1="22.86" x2="184.15" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="184.15" y1="22.86" x2="184.15" y2="20.32" width="0.1524" layer="91"/>
+<junction x="171.45" y="22.86"/>
+<pinref part="F6" gate="1" pin="1"/>
+<wire x1="184.15" y1="22.86" x2="189.23" y2="22.86" width="0.1524" layer="91"/>
+<junction x="184.15" y="22.86"/>
+<pinref part="U$4" gate="G$1" pin="P$2"/>
+<wire x1="158.75" y1="22.86" x2="147.32" y2="22.86" width="0.1524" layer="91"/>
+<junction x="158.75" y="22.86"/>
+<wire x1="147.32" y1="22.86" x2="142.24" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="22.86" x2="142.24" y2="26.67" width="0.1524" layer="91"/>
+<junction x="147.32" y="22.86"/>
+<label x="139.7" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

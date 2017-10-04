@@ -19,5 +19,7 @@ RELAYS,,,,,,,,
 SWITCHES,,,,,,,,
 ?,SWITCH TACTILE SPST-NO 0.05A 24V,0.37,?,Omron Electronics,B3F-1020,Digikey,SW402-ND,https://www.digikey.com/products/en?keywords=B3F-1020
 
+ISOLATORS,,,,,,,,
+1,DGTL ISO 2.5KV 2CH I2C 8SOIC,4.91,4.91,Texas Instruments,ISO1540DR,Digikey,296-34871-1-ND,https://www.digikey.com/product-detail/en/texas-instruments/ISO1540DR/296-34871-1-ND/3587214
 
 
